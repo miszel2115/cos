@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2115 - torcik</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #cc0404;
+            color: #cc0404;
+            text-align: center;
+            padding: 20px;
+        }
+        nav {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="21i15.png" alt="Logo Firmy" style="width: 500px; height: 500px;">
+    </header>
+    <nav>
+        <a href="https://miszel2115.github.io/main/">Strona Miszela</a>
+        <a href="https://sklep.2115.pl/pl/p/2115-RODZINNY-BIZNES-MIXTAPE-2-CD-STANDARD/41">O Nas</a>
+        <a href="https://sklep.2115.pl/">Sklep</a>
+        <a href="https://sklep.2115.pl/pl/i/KONTAKT/9">Kontakt</a>
+    </nav>
+    
+    <div class="photo">
+        <img src="TORT.jpg" alt="torcik" width="1200" height="800" usemap="#swieczki">
+    </div>
+
+    <map id="swieczki">
+        <area shape="rect" coords="198,60,375,167" href="https://d-art.ppstatic.pl/kadry/k/r/1/1c/a5/63cfb77928d02_o_large.jpg" target="_blank" alt="Pisowska Świeczka 1">
+        <area shape="circle" coords="182,381,98" href="https://d-art.ppstatic.pl/kadry/k/r/1/3d/f2/63cfb76ede58f_o_large.jpg" target="_blank" alt="Pisowska Świeczka 2">
+        <area shape="poly" coords="910,390,1024,485,1059,377,967,311,875,379" href="https://d-art.ppstatic.pl/kadry/k/r/1/17/8f/63cfb77fc0381_o_large.jpg" target="_blank" alt="Pisowska Świeczka 3">
+        <area shape="rect" coords="737,56,1002,202" href="https://d-art.ppstatic.pl/kadry/k/r/1/8a/b9/63cfb783ab34b_o_large.jpg" target="_blank" alt="Pisowska Świeczka 4">
+    </map>
+    <hr>
+    <footer>
+        <p>&copy; 2023 By Miszel</p>
+        <p>Data: <span id="currentDate"></span></p>
+        <script>
+           function aktualizujDate() {
+            const currentDateElement = document.getElementById("currentDate");
+            const aktualnaData = new Date();
+            currentDateElement.textContent = aktualnaData.toLocaleDateString() + " " + aktualnaData.toLocaleTimeString();
+        }
+    
+        // Wywołanie funkcji aktualizującej datę na początku
+        aktualizujDate();
+    
+        // Ustawienie interwału, aby odświeżać datę co sekundę
+        setInterval(aktualizujDate, 1000);
+    
+        </script>
+    </footer>
+    </body>
+    </html>
